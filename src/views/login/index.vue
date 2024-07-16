@@ -78,7 +78,7 @@
           :column="4"
           border
         >
-          <el-descriptions-item label="用户名">macro</el-descriptions-item>
+          <el-descriptions-item label="用户名">mall-go</el-descriptions-item>
           <el-descriptions-item label="密码">hello</el-descriptions-item>
           <el-descriptions-item label="联系QQ">792386472</el-descriptions-item>
         </el-descriptions>
