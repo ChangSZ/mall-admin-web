@@ -1,14 +1,21 @@
-@import './variables.scss';
-@import './mixin.scss';
-@import './transition.scss';
-@import './element-ui.scss';
-@import './sidebar.scss';
+@import "./variables.scss";
+@import "./mixin.scss";
+@import "./transition.scss";
+@import "./element-ui.scss";
+@import "./sidebar.scss";
 
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  font-family:
+    Helvetica Neue,
+    Helvetica,
+    PingFang SC,
+    Hiragino Sans GB,
+    Microsoft YaHei,
+    Arial,
+    sans-serif;
 }
 
 html {
@@ -21,7 +28,7 @@ html {
   box-sizing: inherit;
 }
 
-div:focus{
+div:focus {
   outline: none;
 }
 
@@ -50,8 +57,8 @@ a:hover {
 }
 
 //main-container全局样式
-.app-main{
-  min-height: 100%
+.app-main {
+  min-height: 100%;
 }
 
 .app-container {
@@ -60,7 +67,6 @@ a:hover {
 
 //搜索栏样式
 .filter-container {
-
 }
 
 //操作栏样式
@@ -137,22 +143,21 @@ a:hover {
 }
 
 .color-main {
-  color: #409EFF;
+  color: #409eff;
 }
 
 .color-success {
-  color: #67C23A;
+  color: #67c23a;
 }
 
 .color-warning {
-  color: #E6A23C;
+  color: #e6a23c;
 }
 
 .color-danger {
-  color: #F56C6C;
+  color: #f56c6c;
 }
 
 .color-info {
   color: #909399;
 }
-

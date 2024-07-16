@@ -1,20 +1,42 @@
 <template>
   <div>
     <el-card class="login-form-layout">
-      <el-form autoComplete="on" :model="loginForm" :rules="loginRules" ref="loginForm" label-position="left">
+      <el-form
+        autoComplete="on"
+        :model="loginForm"
+        :rules="loginRules"
+        ref="loginForm"
+        label-position="left"
+      >
         <div style="text-align: center">
-          <svg-icon icon-class="login-mall" style="width: 56px;height: 56px;color: #409EFF"></svg-icon>
+          <svg-icon
+            icon-class="login-mall"
+            style="width: 56px; height: 56px; color: #409eff"
+          ></svg-icon>
         </div>
         <h2 class="login-title color-main">mall-admin-web</h2>
         <el-form-item prop="username">
-          <el-input name="username" type="text" v-model="loginForm.username" autoComplete="on" placeholder="请输入用户名">
+          <el-input
+            name="username"
+            type="text"
+            v-model="loginForm.username"
+            autoComplete="on"
+            placeholder="请输入用户名"
+          >
             <span slot="prefix">
               <svg-icon icon-class="user" class="color-main"></svg-icon>
             </span>
           </el-input>
         </el-form-item>
         <el-form-item prop="password">
-          <el-input name="password" :type="pwdType" @keyup.enter.native="handleLogin" v-model="loginForm.password" autoComplete="on" placeholder="请输入密码">
+          <el-input
+            name="password"
+            :type="pwdType"
+            @keyup.enter.native="handleLogin"
+            v-model="loginForm.password"
+            autoComplete="on"
+            placeholder="请输入密码"
+          >
             <span slot="prefix">
               <svg-icon icon-class="password" class="color-main"></svg-icon>
             </span>
@@ -23,20 +45,39 @@
             </span>
           </el-input>
         </el-form-item>
-        <el-form-item style="margin-bottom: 60px;text-align: center">
-          <el-button style="width: 45%" type="primary" :loading="loading" @click.native.prevent="handleLogin">
+        <el-form-item style="margin-bottom: 60px; text-align: center">
+          <el-button
+            style="width: 45%"
+            type="primary"
+            :loading="loading"
+            @click.native.prevent="handleLogin"
+          >
             登录
           </el-button>
-          <el-button style="width: 45%" type="primary" @click.native.prevent="handleTry">
+          <el-button
+            style="width: 45%"
+            type="primary"
+            @click.native.prevent="handleTry"
+          >
             获取体验账号
           </el-button>
         </el-form-item>
       </el-form>
     </el-card>
-    <img :src="login_center_bg" class="login-center-layout">
-    <el-dialog :visible.sync="dialogVisible" :show-close="false" :center="true" width="30%">
+    <img :src="login_center_bg" class="login-center-layout" />
+    <el-dialog
+      :visible.sync="dialogVisible"
+      :show-close="false"
+      :center="true"
+      width="30%"
+    >
       <div style="text-align: center">
-        <el-descriptions title="体验账号" direction="vertical" :column="4" border>
+        <el-descriptions
+          title="体验账号"
+          direction="vertical"
+          :column="4"
+          border
+        >
           <el-descriptions-item label="用户名">macro</el-descriptions-item>
           <el-descriptions-item label="密码">hello</el-descriptions-item>
           <el-descriptions-item label="联系QQ">792386472</el-descriptions-item>

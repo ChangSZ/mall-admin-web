@@ -4,7 +4,7 @@ import { asyncRouterMap, constantRouterMap } from '@/router/index';
 function hasPermission(menus, route) {
   if (route.name) {
     let currMenu = getMenu(route.name, menus);
-    if (currMenu!=null) {
+    if (currMenu != null) {
       //设置菜单的标题、图标和可见性
       if (currMenu.title != null && currMenu.title !== '') {
         route.meta.title = currMenu.title;
@@ -12,7 +12,7 @@ function hasPermission(menus, route) {
       if (currMenu.icon != null && currMenu.title !== '') {
         route.meta.icon = currMenu.icon;
       }
-      if(currMenu.hidden!=null){
+      if (currMenu.hidden != null) {
         route.hidden = currMenu.hidden !== 0;
       }
       if (currMenu.sort != null && currMenu.sort !== '') {
@@ -22,7 +22,7 @@ function hasPermission(menus, route) {
     } else {
       route.sort = 0;
       if (route.hidden !== undefined && route.hidden === true) {
-        route.sort=-1;
+        route.sort = -1;
         return true;
       } else {
         return false;
@@ -37,7 +37,7 @@ function hasPermission(menus, route) {
 function getMenu(name, menus) {
   for (let i = 0; i < menus.length; i++) {
     let menu = menus[i];
-    if (name===menu.name) {
+    if (name === menu.name) {
       return menu;
     }
   }
@@ -48,7 +48,7 @@ function getMenu(name, menus) {
 function sortRouters(accessedRouters) {
   for (let i = 0; i < accessedRouters.length; i++) {
     let router = accessedRouters[i];
-    if(router.children && router.children.length > 0){
+    if (router.children && router.children.length > 0) {
       router.children.sort(compare("sort"));
     }
   }
@@ -56,8 +56,8 @@ function sortRouters(accessedRouters) {
 }
 
 //降序比较函数
-function compare(p){
-  return function(m,n){
+function compare(p) {
+  return function (m, n) {
     let a = m[p];
     let b = n[p];
     return b - a;
