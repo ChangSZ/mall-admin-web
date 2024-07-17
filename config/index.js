@@ -43,7 +43,21 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+    assetsPublicPath: '/admin/',  // 根据需要配置, 比如我的nginx中配置如下:
+    /*
+        location /admin {
+            alias dist/mall/admin;
+            try_files $uri $uri/ /index.html;
+        }
+
+        location /admin/static {
+            alias dist/mall/admin/static;
+            # 确保静态文件不会被进一步处理
+            expires max;
+            log_not_found off;
+            access_log off;
+        }
+    */
 
     /**
      * Source Maps
