@@ -9,7 +9,7 @@
 
 ### 项目演示
 
-项目在线演示地址：[https://www.macrozheng.com/admin/](https://www.macrozheng.com/admin/)
+项目在线演示地址：[http://mall.water-melon.top/admin](http://mall.water-melon.top/admin)
 
 ![后台管理系统功能演示](http://img.macrozheng.com/mall/project/mall_admin_show.png)
 
@@ -55,9 +55,8 @@ src -- 源码目录
 - 克隆源代码到本地，使用IDEA打开，并完成编译;
 - 在IDEA命令行中运行命令：`npm install`,下载相关依赖;
 - 在IDEA命令行中运行命令：`npm run dev`,运行项目;
-- 访问地址：[http://localhost:8090](http://localhost:8090) 即可打开后台管理系统页面（默认用户名:macro, 密码:hello）;
+- 访问地址：[http://localhost:8090](http://localhost:8090) 即可打开后台管理系统页面, 可以直接查看体验账号登录;
 - 具体部署过程请参考：[mall前端项目的安装与部署](https://www.macrozheng.com/mall/deploy/mall_deploy_web.html)
-- 前端自动化部署请参考：[使用Jenkins一键打包部署前端应用，就是这么6！](https://www.macrozheng.com/mall/reference/jenkins_vue.html)
 
 ## 许可证
 
